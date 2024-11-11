@@ -1,0 +1,7 @@
+{
+  "name": "segurity-202010703",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
