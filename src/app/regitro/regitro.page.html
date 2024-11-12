@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>regitro</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/incidencias"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Título</ion-label>
+    <ion-input [(ngModel)]="incidencia.titulo"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Fecha</ion-label>
+    <ion-datetime [(ngModel)]="incidencia.fecha"></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Descripción</ion-label>
+    <ion-textarea [(ngModel)]="incidencia.descripcion"></ion-textarea>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Foto</ion-label>
+    <ion-button (click)="takePhoto()">Capturar Foto</ion-button>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Audio</ion-label>
+    <ion-button (click)="recordAudio()">Grabar Audio</ion-button>
+  </ion-item>
+
+  <ion-button expand="full" (click)="guardarIncidencia()">Guardar Incidencia</ion-button>
+</ion-content>

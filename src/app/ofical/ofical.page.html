@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Acerca del Oficial</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img [src]="oficial.foto" *ngIf="oficial.foto">
+    <ion-card-content>
+      <h2>{{ oficial.nombre }} {{ oficial.apellido }}</h2>
+      <p>Matrícula: {{ oficial.matricula }}</p>
+      <p>"{{ oficial.reflexion }}"</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

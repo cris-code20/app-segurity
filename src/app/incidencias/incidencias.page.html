@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>incidencias</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let incidencia of incidencias">
+      <ion-label>
+        <h2>{{ incidencia.titulo }}</h2>
+        <p>{{ incidencia.fecha }}</p>
+        <p>{{ incidencia.descripcion }}</p>
+
+        <div *ngIf="incidencia.foto">
+          <img [src]="incidencia.foto" alt="Foto de incidencia" style="width: 100%; max-width: 200px;"/>
+        </div>
+
+        <div *ngIf="incidencia.audio">
+          <audio [src]="incidencia.audio" controls></audio>
+        </div>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+
+  <ion-button expand="full" color="primary" href="http://localhost:8100/regitro">Registro De Actividad</ion-button>
+  <ion-button expand="full" color="danger" (click)="eliminarTodasIncidencias()">Eliminar Todas las Incidencias</ion-button>
+
+</ion-content>
+
+
+
